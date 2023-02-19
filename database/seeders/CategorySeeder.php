@@ -32,14 +32,14 @@ class CategorySeeder extends Seeder
         
         DB::table('categories')->insert([
             'id'=>3,
-            'name' => 'Processor',
+            'name' => 'Memory',
             'created_at' => now(),
             'updated_at' => now()
         ]);
         
         DB::table('categories')->insert([
             'id'=>4,
-            'name' => 'Memory',
+            'name' => 'VGA Card',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -53,7 +53,7 @@ class CategorySeeder extends Seeder
 
         DB::table('categories')->insert([
             'id'=>6,
-            'name' => 'VGA Card',
+            'name' => 'PSU',
             'created_at' => now(),
             'updated_at' => now()
         ]);

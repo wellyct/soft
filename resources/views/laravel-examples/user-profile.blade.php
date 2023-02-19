@@ -20,14 +20,14 @@
                 <div class="col-auto my-auto">
                     <div class="h-100">
                         <h5 class="mb-1">
-                            {{ __('Alec Thompson') }}
+                            {{ __('Welly') }}
                         </h5>
                         <p class="mb-0 font-weight-bold text-sm">
-                            {{ __(' CEO / Co-Founder') }}
+                            {{ __(' Admin') }}
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+                {{-- <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
                     <div class="nav-wrapper position-relative end-0">
                         <ul class="nav nav-pills nav-fill p-1 bg-transparent" role="tablist">
                             <li class="nav-item">
@@ -93,7 +93,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

@@ -26,13 +26,14 @@ class InfoUserController extends Controller
             'location' => ['max:70'],
             'about_me'    => ['max:150'],
         ]);
+        
         if($request->get('email') != Auth::user()->email)
         {
-            if(env('IS_DEMO') && Auth::user()->id == 1)
-            {
-                return redirect()->back()->withErrors(['msg2' => 'You are in a demo version, you can\'t change the email address.']);
+            // if(env('IS_DEMO') && Auth::user()->id == 1)
+            // {
+            //     return redirect()->back()->withErrors(['msg2' => 'You are in a demo version, you can\'t change the email address.']);
                 
-            }
+            // }
             
         }
         else{
@@ -48,7 +49,6 @@ class InfoUserController extends Controller
             'email' => $attribute['email'],
             'phone'     => $attributes['phone'],
             'location' => $attributes['location'],
-            'about_me'    => $attributes["about_me"],
         ]);
 
 

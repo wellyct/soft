@@ -6,6 +6,8 @@ use App\Http\Controllers\InfoUserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\UserManagementController;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
@@ -33,18 +35,19 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('billing');
 	})->name('billing');
 
-	Route::get('virtual-reality', function () {
-		return view('virtual-reality');
-	})->name('virtual-reality');
 
 	Route::get('profile', function () {
 		return view('profile');
 	})->name('profile');
 
 
-	Route::get('user-management', function () {
-		return view('laravel-examples/user-management');
-	})->name('user-management');
+	// Route::get('user-management', function () {
+	// 	return view('admin/user-management');
+	// })->name('user-management');
+
+	Route::get('/user-management', [UserManagementController::class, 'index']);
+	Route::get('/user-management.create', [UserManagementController::class, 'create']);
+
 
 	Route::get('tables', function () {
 		return view('tables');
@@ -66,13 +69,7 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('dashboard');
 	})->name('sign-up');
 
-	Route::get('admin-dashboard', function() {
-		return view ('admin.dashboard');
-	});
 
-	Route::get('member-dashboard', function() {
-		return view ('member.dashboard');
-	});
 });
 
 
